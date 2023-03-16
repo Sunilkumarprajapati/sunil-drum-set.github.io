@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        window.addEventListener('keydown',(event) =>{
+            if(event.keyCode ===65){
+                const audio = new Audio("sounds_clap.wav");
+                audio.play();
+                var a = Math.floor(Math.random()*10);
+                if(a<5){
+                    document.getElementById("f").style.backgroundColor="rgb(255, 98, 0)";
+                    document.getElementById("A").style.backgroundColor="rgb(255, 98, 0)";
+                }
+                else{
+                    document.getElementById("f").style.backgroundColor="red";
+                    document.getElementById("A").style.backgroundColor="red";
+                }
+                //*********************** 
+                A.classList.add("playing");
+            }
+            else if(event.keyCode === 83){
+                const audio = new Audio("sounds_hihat.wav");
+                audio.play();
+                
+                var a = Math.floor(Math.random()*10);
+                if(a<5){
+                    document.getElementById("f").style.backgroundColor="orange";
+                document.getElementById("S").style.backgroundColor="orange";
+                }
+                else{
+                    document.getElementById("f").style.backgroundColor="yellow";
+                document.getElementById("S").style.backgroundColor="yellow";
+                }
+                S.classList.add("playing");
+            }
+            else if(event.keyCode === 68){
+                const audio = new Audio("sounds_kick.wav");
+                audio.play();
+                
+                var a = Math.floor(Math.random()*10);
+                if(a<5){
+                    document.getElementById("f").style.backgroundColor="green";
+                document.getElementById("D").style.backgroundColor="green";
+                }
+                else{
+                document.getElementById("f").style.backgroundColor="rgb(98, 255, 0)";
+                document.getElementById("D").style.backgroundColor="rgb(98, 255, 0)";
+                }
+                D.classList.add("playing");
+            }
+            else if(event.keyCode === 70){
+                const audio = new Audio("sounds_openhat.wav");
+                audio.play();
+                
+                var a = Math.floor(Math.random()*10);
+                if(a<5){
+                    document.getElementById("f").style.backgroundColor="blue";
+                document.getElementById("F").style.backgroundColor="blue";
+                }
+                else{
+                document.getElementById("f").style.backgroundColor="rgb(98, 0, 255)";
+                document.getElementById("F").style.backgroundColor="rgb(98, 0, 255)";
+                }
+                F.classList.add("playing");
+            }
+            else if(event.keyCode === 71){
+                const audio = new Audio("sounds_boom.wav");
+                audio.play();
+                document.getElementById("f").style.backgroundColor="aqua";
+                document.getElementById("G").style.backgroundColor="aqua";
+                document.getElementById("G").style.border="0.4rem dashed black";
+                G.classList.add("playing");
+            }
+            else if(event.keyCode === 72){
+                const audio = new Audio("sounds_ride.wav");
+                audio.play();
+                
+                var a = Math.floor(Math.random()*10);
+                if(a<5){
+                document.getElementById("f").style.backgroundColor="rgb(98, 255, 0)";
+                document.getElementById("H").style.backgroundColor="rgb(98, 255, 0)";
+                }
+                else{
+                    document.getElementById("f").style.backgroundColor="rgb(0, 250, 100)";
+                    document.getElementById("H").style.backgroundColor="rgb(0,250,100)";
+                }
+                H.classList.add("playing");
+            }
+            else if(event.keyCode === 74){
+                const audio = new Audio("sounds_snare.wav");
+                audio.play();
+                
+                var a = Math.floor(Math.random()*10);
+                if(a<5){
+                    document.getElementById("f").style.backgroundColor="gray";
+                document.getElementById("J").style.backgroundColor="gray";
+                }
+                else{
+                    document.getElementById("f").style.backgroundColor="rgb(200,200,200)";
+                document.getElementById("J").style.backgroundColor="rgb(200,200,200)";
+                }
+                J.classList.add("playing");
+            }
+            else if(event.keyCode === 75){
+                const audio = new Audio("sounds_tom.wav");
+                audio.play();
+                
+                var a = Math.floor(Math.random()*10);
+                if(a<5){
+                    document.getElementById("f").style.backgroundColor="magenta";
+                document.getElementById("K").style.backgroundColor="magenta";
+                }
+                else{
+                    document.getElementById("f").style.backgroundColor="pink";
+                document.getElementById("K").style.backgroundColor="pink";
+                }
+                K.classList.add("playing");
+            }
+            else if(event.keyCode === 76){
+                const audio = new Audio("sounds_tink.wav");
+                audio.play();
+                
+                var a = Math.floor(Math.random()*10);
+                if(a<5){
+                    document.getElementById("f").style.backgroundColor="yellow";
+                document.getElementById("L").style.backgroundColor="yellow";
+                }
+                else{
+                    document.getElementById("f").style.backgroundColor="rgb(100,150,200)";
+                document.getElementById("L").style.backgroundColor="rgb(100,150,200)";
+                }
+                L.classList.add("playing");
+            }  
+            else{
+                const audio = new Audio("life_akhil.mp3");
+                const audio1 = new Audio("Tip_Tip_Barsa_Pani_2.0_song_Hip_Hop_mix__akshay_the_A_320_kbps_HQ_mp3_Download_link_in_Description(128k).mp3");
+                if(event.keyCode ===80){
+                    audio.play();
+                }
+                // else{
+                //     audio.pause();
+                // }
+                else if(event.keyCode ===84){
+                    audio1.play();
+                }
+                // else{
+                //     audio1.pause();
+                // }
+                // Q key
+                if(event.keyCode === 81){
+                    audio.pause();
+                    audio1.pause();
+                }
+            } 
+        });
+    </script>
+    <script>
+        window.addEventListener('keyup',(event)=>{
+            if(event.keyCode === 74){
+                document.getElementById("f").style.backgroundColor="black";
+                document.getElementById("J").style.backgroundColor="aquamarine";
+                J.classList.remove("playing");
+            }
+            else if(event.keyCode === 65){
+                document.getElementById("f").style.backgroundColor="black";
+                document.getElementById("A").style.backgroundColor="aquamarine";
+                //**************************************************************************************
+                A.classList.remove("playing");
+            }
+            else if(event.keyCode === 83){
+                document.getElementById("f").style.backgroundColor="black";
+                document.getElementById("S").style.backgroundColor="aquamarine";
+                S.classList.remove("playing");
+            }
+            else if(event.keyCode === 68){
+                document.getElementById("f").style.backgroundColor="black";
+                document.getElementById("D").style.backgroundColor="aquamarine";
+                D.classList.remove("playing");
+            }
+            else if(event.keyCode === 70){
+                document.getElementById("f").style.backgroundColor="black";
+                document.getElementById("F").style.backgroundColor="aquamarine";
+                F.classList.remove("playing");
+            }
+            else if(event.keyCode === 71){
+                document.getElementById("G").style.border="0.4rem solid black";
+                document.getElementById("f").style.backgroundColor="black";
+                document.getElementById("G").style.backgroundColor="aquamarine";
+                G.classList.remove("playing");
+            }
+            else if(event.keyCode === 72){
+                document.getElementById("f").style.backgroundColor="black";
+                document.getElementById("H").style.backgroundColor="aquamarine";
+                H.classList.remove("playing");
+            }
+            else if(event.keyCode === 75){
+                document.getElementById("f").style.backgroundColor="black";
+                document.getElementById("K").style.backgroundColor="aquamarine";
+                K.classList.remove("playing");
+            }
+            else if(event.keyCode === 76){
+                document.getElementById("f").style.backgroundColor="black";
+                document.getElementById("L").style.backgroundColor="aquamarine";
+                L.classList.remove("playing");
+            }
+
+        });
+    </script>
+</head>
+<body>
+    <div class="keys">
+
+        <div id="A" data-key="65" class="key">
+            <kbd>A</kbd>
+            <center><span class="sound">clap</span></center>
+        </div>
+        <div id="S" data-key="83" class="key">
+            <kbd>S</kbd>
+            <center><span class="sound">hihat</span></center>
+        </div>
+        <div id="D" data-key="68" class="key">
+            <kbd>D</kbd>
+            <center><span class="sound">kick</span></center>
+        </div>
+        <div id="F" data-key="70"  class="key">
+            <kbd>F</kbd>
+            <center><span class="sound">openhat</span></center>
+        </div>
+        <div id="G" data-key="71" class="key">
+            <kbd>G</kbd>
+            <center><span class="sound">boom</span></center>
+        </div>
+        <div id="H" data-key="72" class="key">
+            <kbd>H</kbd>
+            <center><span class="sound">ride</span></center>
+        </div>
+        <div id="J" data-key="74" class="key">
+            <kbd>J</kbd>
+            <center><span class="sound">snare</span></center>
+        </div>
+        <div id="K" data-key="75" class="key">
+            <kbd>K</kbd>
+            <center><span class="sound">tom</span></center>
+        </div>
+        <div id="L" data-key="76" class="key">
+            <kbd>L</kbd>
+            <center><span class="sound">tink</span></center>
+        </div>
+        
+    </div>
+
+    <!-- <audio data-key="65" src="sounds_clap.wav"></audio>
+    <audio data-key="83" src="sounds_hihat.wav"></audio>
+    <audio data-key="68" src="sounds_kick.wav"></audio>
+    <audio data-key="70" src="sounds_openhat.wav"></audio>
+    <audio data-key="71" src="sounds_boom.wav"></audio>
+    <audio data-key="72" src="sounds_ride.wav"></audio>
+    <audio data-key="74" src="sounds_snare.wav"></audio>
+    <audio data-key="75" src="sounds_tom.wav"></audio>
+    <audio data-key="76" src="sounds_tink.wav"></audio>
+
+    <script>
+        window.addEventListener("keydown", (e)=>
+        {
+            const audio=document.querySelector('audio[data-key="${e.keyCode}"]');
+            var key=document.querySelector('.key[data-key="${e.keyCode}"]');
+            console.log(audio);
+        
+            // if (!audio) return;
+            audio.play();
+            audio.currentTime=0;
+            key.classList.add("playing");
+        });
+    </script> -->
+
+    <footer id="f">Powered by Sunil & All copyrights &copy; are reserved.</footer>
+</body>
+</html>
